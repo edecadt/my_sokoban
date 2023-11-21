@@ -10,7 +10,7 @@
 
 int is_help(const char *str)
 {
-    if (str[0] == '-' && str[1] == 'h')
+    if (str[0] == '-' && str[1] == 'h' && str[2] == '\0')
         return 1;
     return 0;
 }
