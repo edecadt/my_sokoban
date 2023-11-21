@@ -45,6 +45,8 @@ char *my_strdup(char const *src);
 char *my_putnbr_base(int nbr, char const *base);
 int my_put_float(double num, int precision);
 char *my_strchr(char *str, char c);
+char **my_str_to_word_array(char *str, const char *separator);
+int get_num_of_char(char *str, char character);
 
 typedef struct my_printf_s {
     char char_type;

@@ -39,6 +39,7 @@ SRC	=	my_putchar.c											\
 		my_putnbr_base.c										\
 		my_put_float.c											\
 		my_strchr.c												\
+		my_str_to_word_array.c									\
 		my_printf/src/my_printf.c 								\
 		my_printf/src/flags_functions/my_print_arg.c			\
 		my_printf/src/flags_functions/my_get_precision.c		\
