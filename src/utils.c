@@ -6,6 +6,7 @@
 */
 
 #include <unistd.h>
+#include "my_sokoban.h"
 
 int is_help(const char *str)
 {
@@ -14,7 +15,7 @@ int is_help(const char *str)
     return 0;
 }
 
-void display_help_text(void)
+void display_help(void)
 {
     write(1, "USAGE\n\t./my_sokoban\nDESCRIPTION\n\tmap file "
     "representing the warehouse map, containing '#' for walls,"
