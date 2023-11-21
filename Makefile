@@ -6,16 +6,18 @@
 ##
 
 SRC = src/main.c \
+	  src/sokoban.c \
+	  src/ncurses.c \
+	  src/files.c \
+	  src/map.c \
+	  src/player.c \
 	  src/utils.c
 OBJ_DIR = build
 OBJ = $(patsubst src/%.c, $(OBJ_DIR)/%.o, $(SRC))
 CFLAGS += -Wextra -I./include
 LDFLAGS += -L./lib \
            -lmy \
-           -lcsfml-graphics \
-           -lcsfml-window \
-           -lcsfml-system \
-           -lcsfml-audio
+           -lncurses
 NAME = my_sokoban
 MKDIR_P = mkdir -p
 
