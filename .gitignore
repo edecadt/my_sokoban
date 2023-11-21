@@ -3,3 +3,4 @@ my_sokoban
 *.o
 *.a
 .idea
+/maps
