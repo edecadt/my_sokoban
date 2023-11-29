@@ -5,9 +5,9 @@
 ** main
 */
 
-#include "my_sokoban.h"
+#include "sokoban.h"
 
-int main(int ac, char **av)
+int main(int argc, char **argv)
 {
-    return sokoban(ac, av);
+    return sokoban(argc, argv);
 }

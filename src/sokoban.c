@@ -2,37 +2,38 @@
 ** EPITECH PROJECT, 2023
 ** my_sokoban
 ** File description:
-** Main function
+** sokoban.c
 */
 
-#include <my_sokoban.h>
 #include <sys/stat.h>
+#include <ncurses.h>
+#include "sokoban.h"
+#include "my.h"
 
-static int read_arg(Map *map, char *arg)
+static int help_text(void)
 {
-    struct stat st;
-
-    if (is_help(arg)) {
-        display_help();
-        return 1;
-    }
-    if (stat(arg, &st) == -1)
-        map->exit_code = 84;
-    init_map(map, arg);
+    my_printf("USAGE\n     ./my_sokoban map\nDESCRIPTION\n     map  file "
+    "representing the warehouse map, containing '#' for walls,\n\t  "
+    "'P' for the player, 'X' for boxes and 'O' for storage locations.\n");
     return 0;
 }
 
-int sokoban(const int ac, char **av)
+int sokoban(int argc, char **argv)
 {
-    Map map;
+    map_t map;
+    struct stat sb;
 
-    map.exit_code = 0;
-    if (ac != 2)
+    initscr();
+    keypad(stdscr, TRUE);
+    noecho();
+    curs_set(FALSE);
+    if (argc != 2)
         return 84;
-    if (read_arg(&map, av[1]) == 1)
-        return 0;
-    if (map.exit_code == 84)
-        return 84;
-    ncurses_loop(&map);
+    if (my_strcmp(argv[1], "-h") == 0)
+        return help_text();
+    map = load_map(argv[1]);
+    game_loop(&map);
+    free_map(&map);
+    endwin();
     return 0;
 }

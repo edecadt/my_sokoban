@@ -1,6 +1,8 @@
+cmake-build-debug/
+CMakeLists.txt
+*.o
+.idea
 my_sokoban
 /build
-*.o
 *.a
-.idea
 /maps
