@@ -49,7 +49,7 @@ void check_game(map_t *map)
         endwin();
         exit(1);
     }
-    if (boxes_on_storage == map->nb_boxes) {
+    if (boxes_on_storage == map->nb_storages) {
         endwin();
         exit(0);
     }
