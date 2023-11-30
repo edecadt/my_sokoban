@@ -52,8 +52,7 @@ Example map:
 
 ### 4. Bonus and Tools
 
-   The project utilizes the ncurses library for terminal mode user interface.
-   Compilation is facilitated through a Makefile with rules for re, clean, and fclean.
-   Additional features such as menus, a game interface, music, etc., can be added as needed.
+The project utilizes the ncurses library for the terminal mode user interface.
+There are no bonuses for now.
 
 Explore the game, leverage additional features, and feel free to create your own maps to test your Sokoban skills!
