@@ -16,15 +16,15 @@ void game_loop(map_t *map)
     int cols;
 
     while (key != 27) {
-        clear();
         getmaxyx(stdscr, rows, cols);
         handle_input(map, key);
-        check_game(map);
+        clear();
         if (cols >= map->col && rows >= map->row)
             display_map(map);
         else
             mvprintw(rows / 2, 0, "Please enlarge the terminal");
-        key = getch();
+        check_game(map);
         refresh();
+        key = getch();
     }
 }
