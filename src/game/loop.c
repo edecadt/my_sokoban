@@ -23,8 +23,8 @@ void game_loop(map_t *map)
             display_map(map);
         else
             mvprintw(rows / 2, 0, "Please enlarge the terminal");
-        check_game(map);
         refresh();
+        check_game(map);
         key = getch();
     }
 }

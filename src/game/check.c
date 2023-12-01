@@ -39,12 +39,11 @@ void check_game(map_t *map)
     int stuck_boxes = 0;
     int boxes_on_storage = 0;
 
-    for (int i = 0; i < map->row; i++) {
+    for (int i = 0; i < map->row; i++)
         for (int j = 0; j < map->col; j++) {
             stuck_boxes += is_box_stuck(map, i, j);
             boxes_on_storage += is_box_on_storage(map, i, j);
         }
-    }
     if (stuck_boxes == map->nb_boxes) {
         endwin();
         exit(1);
