@@ -1,4 +1,4 @@
-# my_sokoban Documentation
+# Documentation my_sokoban
 
 ## Overview
 
@@ -15,8 +15,6 @@ This command compiles the my_sokoban program.
 ### 2. Usage
 
 To launch the game, use the following command:
-
-bash
 
 ```shell
 ./my_sokoban map
