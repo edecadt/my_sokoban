@@ -22,7 +22,7 @@ void game_loop(map_t *map)
         if (cols >= map->col && rows >= map->row)
             display_map(map);
         else
-            mvprintw(rows / 2, 0, "Please enlarge the terminal");
+            mvprintw(rows / 2, (cols - 27) / 2, "Please enlarge the terminal");
         refresh();
         check_game(map);
         key = getch();
